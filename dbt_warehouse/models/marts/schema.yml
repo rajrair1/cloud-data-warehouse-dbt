@@ -1,0 +1,13 @@
+version: 2
+models:
+  - name: mart_daily_city_weather
+    description: One latest weather observation per city and date for BI reporting.
+    columns:
+      - name: weather_key
+        tests: [unique, not_null]
+      - name: city
+        tests: [not_null]
+      - name: weather_date
+        tests: [not_null]
+      - name: precipitation_mm
+        tests: [not_null]
